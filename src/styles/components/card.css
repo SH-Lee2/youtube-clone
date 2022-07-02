@@ -1,0 +1,7 @@
+.card {
+    min-width: 280px;
+    min-height: 200px;
+    padding: 1em 0.5em;
+    flex: 1;
+    flex-basis: 25%;
+}

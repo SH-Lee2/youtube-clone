@@ -1,0 +1,176 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.card {
+    min-width: 280px;
+    min-height: 200px;
+    padding: 1em 0.5em;
+    flex: 1;
+    flex-basis: 25%;
+}
+.video-container {
+    width: 80%;
+}
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.thumbnail img {
+        object-fit: cover;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }
+.thumbnail img:hover {
+            transform: scale(1.02);
+        }
+.thumbnail {
+    margin-bottom: 0.5em;
+}
+.metadata {
+    display: flex;
+    min-height: 80px;
+    align-items: flex-start;
+}
+.metadata img {
+        border-radius: 50%;
+        width: 15%;
+        height: 15%;
+        margin-right: 1.2em;
+    }
+.metadata .title {
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+.metadata .channel-title {
+        font-size: 0.75rem;
+        margin-bottom: 0.2em;
+    }
+.metadata .publish-time {
+        font-size: 0.7rem;
+    }
