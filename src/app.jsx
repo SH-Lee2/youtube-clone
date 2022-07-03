@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Header from "./components/header/header";
 
 import VideoList from "./components/video_list/video_list";
 import "./style.css";
@@ -28,7 +29,7 @@ function App() {
 
     return (
         <div className="video-container">
-            {/* search */}
+            <Header />
             {loading && <VideoList videos={videos} />}
         </div>
     );

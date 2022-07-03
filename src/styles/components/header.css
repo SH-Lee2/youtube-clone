@@ -1,0 +1,71 @@
+.header {
+    height: 4.5rem;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(1rem + 1vw);
+    background-color: #ffffff;
+    opacity: 0.95;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: calc(1.25rem + 1vw);
+    font-weight: 600;
+    span {
+        margin-left: -0.1em;
+        margin-right: -0.1em;
+    }
+    svg {
+        color: red;
+        margin-right: 0.2em;
+    }
+}
+
+.search_video {
+    padding: 0.4em 0.8em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 30%;
+    min-width: max-content;
+    display: flex;
+    justify-content: space-between;
+    input {
+        font-size: 1rem;
+        border: none;
+        flex: 1;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        text-align: end;
+        background-color: transparent;
+        border: none;
+    }
+    @media only screen and (max-width: 520px) {
+        border: none;
+        width: min-content;
+        button {
+            display: block !important;
+        }
+        input {
+            display: none;
+        }
+    }
+}
+
+.github-page {
+    border-radius: 50%;
+    svg {
+        font-size: calc(1.25rem + 1vw);
+        color: black;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
