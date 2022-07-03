@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "moment/locale/ko";
 import Moment from "react-moment";
+import "moment/locale/ko";
 const KEY = process.env.REACT_APP_KEY;
 
 const Video = ({ video: { snippet } }) => {
