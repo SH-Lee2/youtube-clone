@@ -1,0 +1,80 @@
+.sidebar-container {
+    background-color: #ffffff;
+    height: 100vh;
+    font-size: 0.8rem;
+    z-index: 1;
+    position: sticky;
+    top: 4.5rem;
+}
+@media only screen and (max-width: 672px) {
+    .sidebar-container {
+        display: none;
+    }
+    .open-menu {
+        display: block !important;
+    }
+}
+.sidebar {
+    padding: 0 0 1rem 0;
+    width: 240px;
+    hr {
+        margin: 1em 0px;
+        border: 0.5px solid #f2f2f2;
+    }
+}
+
+.login {
+    padding: 0.5em 1.5em;
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.login-button {
+    padding: 0.4em 1em;
+    background-color: transparent;
+    border: 1px solid #3ea6ff;
+    color: #3ea6ff;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 0.7em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.items-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 1.25em;
+    padding-left: 1.5rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+/* sidebar 축소 사이즈 */
+.short-sidebar {
+    width: 72px;
+}
+.short-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    padding: 1rem 0;
+
+    &:hover {
+        background-color: #f2f2f2;
+    }
+}
