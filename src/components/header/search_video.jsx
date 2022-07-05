@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import SearchIcon from "@mui/icons-material/Search";
 const SearchVideo = () => {
     const formRef = useRef();
     const inputRef = useRef();
@@ -9,12 +7,18 @@ const SearchVideo = () => {
         event.preventDefault();
     };
     return (
-        <form className="search_video" ref={formRef} onSubmit={handleSearch}>
-            <input ref={inputRef} type="text" placeholder="검색" />
-            <button type="submit">
-                <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
-        </form>
+        <div className="search_video-header">
+            <form
+                className="search_video"
+                ref={formRef}
+                onSubmit={handleSearch}
+            >
+                <input ref={inputRef} type="text" placeholder="검색" />
+                <button type="submit">
+                    <SearchIcon />
+                </button>
+            </form>
+        </div>
     );
 };
 

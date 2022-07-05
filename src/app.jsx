@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/header/header";
+import MiniSideBar from "./components/sidebar/mini_sidebar";
+import SideBar from "./components/sidebar/sidebar";
 
 import VideoList from "./components/video_list/video_list";
 import "./style.css";
@@ -8,6 +10,7 @@ const KEY = process.env.REACT_APP_KEY;
 function App() {
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [menu, setMenu] = useState(true);
     useEffect(() => {
         const getVideos = async () => {
             try {
@@ -27,11 +30,18 @@ function App() {
         getVideos();
     }, []);
 
+    const handleMenu = () => {
+        setMenu((pre) => !pre);
+    };
+
     return (
-        <div className="video-container">
-            <Header />
-            {loading && <VideoList videos={videos} />}
-        </div>
+        <>
+            <Header onClickMenu={handleMenu} />
+            <main className="main">
+                {!menu ? <SideBar /> : <MiniSideBar />}
+                {loading && <VideoList videos={videos} />}
+            </main>
+        </>
     );
 }
 

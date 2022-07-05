@@ -1,13 +1,14 @@
-import { faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import SearchVideo from "./search_video";
-
-const Header = () => {
+import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import MenuIcon from "@mui/icons-material/Menu";
+const Header = ({ onClickMenu }) => {
     return (
         <header className="header">
             <div className="logo">
-                <FontAwesomeIcon icon={faYoutube} />
+                <MenuIcon className="menu" onClick={onClickMenu} />
+                <YouTubeIcon />
                 <h1>
                     You<span>T</span>ube
                 </h1>
@@ -19,7 +20,7 @@ const Header = () => {
                 rel="noreferrer"
                 className="github-page"
             >
-                <FontAwesomeIcon icon={faGithub} />
+                <GitHubIcon />
             </a>
         </header>
     );

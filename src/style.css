@@ -122,6 +122,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.main {
+    display: grid;
+    grid-auto-flow: column;
+}
 .card {
     min-width: 280px;
     min-height: 200px;
@@ -130,42 +134,53 @@ table {
 }
 .header {
     height: 4.5rem;
-    width: 100%;
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 0 calc(1rem + 1vw);
+    padding: 0 1.5rem;
     background-color: #ffffff;
     opacity: 0.95;
+    border-bottom: 2px solid #f2f2f2;
+    width: 100%;
+}
+.search_video-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .logo {
     display: flex;
     align-items: center;
-    font-size: calc(1.25rem + 1vw);
+    font-size: calc(0.8rem + 0.5vw);
     font-weight: 600;
 }
 .logo span {
         margin-left: -0.1em;
         margin-right: -0.1em;
     }
+.logo .menu {
+        cursor: pointer;
+        color: black;
+        margin-right: 0.5em;
+        font-size: calc(1rem + 1vw);
+    }
 .logo svg {
+        font-size: calc(1.5rem + 1vw);
         color: red;
-        margin-right: 0.2em;
     }
 .search_video {
     padding: 0.4em 0.8em;
-    border: 1px solid black;
-    box-sizing: border-box;
+    border: 2px solid #f2f2f2;
+    box-shadow: #f2f2f2 0px 4px 12px;
     width: 30%;
     min-width: max-content;
     display: flex;
-    justify-content: space-between;
+    font-size: calc(0.8rem + 0.5vw);
 }
 .search_video input {
-        font-size: 1rem;
         border: none;
         flex: 1;
     }
@@ -177,10 +192,11 @@ table {
         background-color: transparent;
         border: none;
     }
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 610px) {
 .search_video {
         border: none;
         width: min-content;
+        box-shadow: none;
 }
         .search_video button {
             display: block !important;
@@ -191,23 +207,95 @@ table {
     }
 .github-page {
     border-radius: 50%;
+    text-align: end;
 }
 .github-page svg {
-        font-size: calc(1.25rem + 1vw);
+        font-size: calc(1.5rem + 1vw);
         color: black;
     }
 .github-page svg:hover {
             transform: scale(1.02);
         }
-.video-container {
-    background-color: #f9f9f9;
-    margin-top: 4.5rem;
-    padding: calc(1rem + 1vw);
+.sidebar-container {
+    background-color: #ffffff;
+    height: 100vh;
+    font-size: 0.8rem;
+    z-index: 1;
+    position: sticky;
+    top: 4.5rem;
 }
+@media only screen and (max-width: 672px) {
+    .sidebar-container {
+        display: none;
+    }
+    .open-menu {
+        display: block !important;
+    }
+}
+.sidebar {
+    padding: 0 0 1rem 0;
+    width: 240px;
+}
+.sidebar hr {
+        margin: 1em 0px;
+        border: 0.5px solid #f2f2f2;
+    }
+.login {
+    padding: 0.5em 1.5em;
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.login-button {
+    padding: 0.4em 1em;
+    background-color: transparent;
+    border: 1px solid #3ea6ff;
+    color: #3ea6ff;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-top: 0.7em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.items-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #aaaaaa;
+    margin-bottom: 1.25em;
+    padding-left: 1.5rem;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+.item:hover {
+        background-color: #f2f2f2;
+    }
+/* sidebar 축소 사이즈 */
+.short-sidebar {
+    width: 72px;
+}
+.short-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    padding: 1rem 0;
+}
+.short-item:hover {
+        background-color: #f2f2f2;
+    }
 .video-list {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    background-color: #f9f9f9;
+    padding: calc(0.5rem + 0.5vw);
     justify-content: space-between;
     align-items: center;
 }

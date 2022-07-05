@@ -1,41 +1,51 @@
 .header {
     height: 4.5rem;
-    width: 100%;
     display: flex;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 0 calc(1rem + 1vw);
+    padding: 0 1.5rem;
     background-color: #ffffff;
     opacity: 0.95;
+    border-bottom: 2px solid #f2f2f2;
+    width: 100%;
+}
+.search_video-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .logo {
     display: flex;
     align-items: center;
-    font-size: calc(1.25rem + 1vw);
+    font-size: calc(0.8rem + 0.5vw);
     font-weight: 600;
     span {
         margin-left: -0.1em;
         margin-right: -0.1em;
     }
+    .menu {
+        cursor: pointer;
+        color: black;
+        margin-right: 0.5em;
+        font-size: calc(1rem + 1vw);
+    }
     svg {
+        font-size: calc(1.5rem + 1vw);
         color: red;
-        margin-right: 0.2em;
     }
 }
-
 .search_video {
     padding: 0.4em 0.8em;
-    border: 1px solid black;
-    box-sizing: border-box;
+    border: 2px solid #f2f2f2;
+    box-shadow: #f2f2f2 0px 4px 12px;
     width: 30%;
     min-width: max-content;
     display: flex;
-    justify-content: space-between;
+    font-size: calc(0.8rem + 0.5vw);
     input {
-        font-size: 1rem;
         border: none;
         flex: 1;
         &:focus {
@@ -47,9 +57,10 @@
         background-color: transparent;
         border: none;
     }
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: 610px) {
         border: none;
         width: min-content;
+        box-shadow: none;
         button {
             display: block !important;
         }
@@ -61,8 +72,9 @@
 
 .github-page {
     border-radius: 50%;
+    text-align: end;
     svg {
-        font-size: calc(1.25rem + 1vw);
+        font-size: calc(1.5rem + 1vw);
         color: black;
         &:hover {
             transform: scale(1.02);

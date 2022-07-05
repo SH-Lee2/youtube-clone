@@ -1,4 +1,6 @@
 @import "./base/reset.css";
+@import "./components/main.css";
 @import "./components/card.css";
 @import "./components/header.css";
+@import "./components/sidebar.css";
 @import "./components/video_list.css";
